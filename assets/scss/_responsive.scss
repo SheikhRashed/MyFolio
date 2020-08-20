@@ -1,0 +1,244 @@
+// For large devices
+@media (max-width: 1200px) {
+    // header
+    header{
+        .container{
+            .navbar-brand{
+                // display: none;
+            }
+            .navbar-collapse{
+                text-align: center;
+                .navbar-nav{
+                    .nav-item{
+                        // background: #fff;
+                        margin: 6px 0px !important;
+                        transition: all .3s linear;
+                        &:hover{
+                            background: #cfc91dbb;
+                            transform: scale(1) !important;
+                        }
+                        &::after,&::before{
+                            height: 4px !important;
+                            transition-delay: .4s !important;
+                        }
+                        &.active{
+                                background: #cfc91dbb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// sm large small device
+@media(max-width: 1024px) {
+
+    // common section title
+    .section_title{
+       
+        .text{
+           padding: 0px 90px;
+        }
+    }
+    
+    // Service
+    #service{
+        .container{
+           display: grid;
+           grid-template-columns: repeat(4,1fr);
+           gap: 20px;
+           grid-template-areas: 
+           "t t t t"
+           "l l l l";
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+           .section_title{
+            grid-area: t;
+            text-align: center;
+           }
+           .left_side{
+            grid-area: l;
+            .service_box{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+               
+            }
+           }
+           .right_side{
+               grid-area: r;
+               background: url('../images/services.jpg')center center/cover no-repeat;
+           }
+        }
+    }
+
+}
+
+
+//For small medium device
+@media(max-width: 768px) {
+    // common section title
+    .section_title{
+    
+        .text{
+            padding: 0px 38px;
+        }
+    }
+    // header
+    .navbar-brand{
+        img{
+            max-width: 220px;
+        }
+    }
+
+    // banner
+    #banner{
+        .container{
+            .bnnr_content{
+                .sub_title{
+                    font-size: 18px;
+                    letter-spacing: 8px;
+                }
+                .title{
+                    font-size: 42px;
+                    letter-spacing: 12px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+// For small devices
+@media(max-width: 575px) {
+    // common section title
+    .section_title{
+
+        .text{
+            padding: 0px 16px;
+        }
+    }
+     // header
+     .navbar-brand{
+        img{
+            max-width: 180px;
+        }
+    }
+    .navbar-toggler{
+        padding: 4px 6px;
+    }
+
+    // Service
+    #service{
+        .container{
+       
+            .left_side{
+            grid-area: l;
+            .service_box{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                
+            }
+            }
+        }
+    }
+
+    #work{
+        .container{
+            
+    
+        }
+        .container-fluid{
+            padding: 0;
+            .our_gallery_box{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+                gap: 0;
+                // justify-content: center;
+                   .gallery{
+                       position: relative;
+                       background-color: #ddd;
+                      
+    
+                        &:hover{
+                            .img_overlay{
+                                opacity: 1;
+                                transform: scale(.8);
+                                pointer-events: initial;
+                                cursor: pointer;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                       .img_overlay{
+                           position: absolute;
+                           background: #02918c8f;
+                           top: 0;
+                           left: 0;
+                           width: 100%;
+                           height: 100%;
+                           text-align: center;
+                           color: #fff;
+                           display: flex;
+                           flex-direction: column;
+                           justify-content: center;
+                           transition: all .3s linear;
+                           opacity: 0;
+                           pointer-events: none;
+                           .title{
+                               font-size: 18px;
+                               line-height: 22px;
+                               text-transform: uppercase;
+                               font-weight: 800;
+                           }
+                           .text{
+                               font-size: 12px;
+                               font-weight: 600;
+    
+                           }
+    
+                       }
+                   } 
+            }
+        }
+    }
+    
+}
+
+// For Extra small device
+@media(max-width: 480px) {
+    // common section title
+    .section_title{
+    
+        .text{
+            padding: 0px 8px;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    // banner
+    #banner{
+        height: 75vh;
+        .container{
+            .bnnr_content{
+                height: 50vh;
+                .sub_title{
+                    font-size: 12px;
+                    letter-spacing: 8px;
+                }
+                .title{
+                    font-size: 28px;
+                    letter-spacing: 10px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
